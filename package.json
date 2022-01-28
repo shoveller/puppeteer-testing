@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --preset=ts-jest",
+    "debug": "NODE_ENV=debug npm test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,6 +48,7 @@
     "faker": "^6.6.6",
     "jest": "^27.4.7",
     "jest-cli": "^27.4.7",
-    "puppeteer": "^13.1.2"
+    "puppeteer": "^13.1.2",
+    "ts-jest": "^27.1.3"
   }
 }
