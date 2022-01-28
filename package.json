@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
@@ -39,5 +38,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/faker": "^6.6.9",
+    "@types/jest": "^27.4.0",
+    "@types/jest-cli": "^24.3.0",
+    "@types/puppeteer": "^5.4.4",
+    "faker": "^6.6.6",
+    "jest": "^27.4.7",
+    "jest-cli": "^27.4.7",
+    "puppeteer": "^13.1.2"
   }
 }
