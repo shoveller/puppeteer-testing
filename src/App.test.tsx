@@ -44,6 +44,15 @@ describe('페이지가 뜨면', () => {
     const innerHTML = await page.$eval('.App-link', (element) => element.innerHTML)
     // 단정을 실행
     expect(innerHTML).toBe('Learn React')
-    // 테스트 함수의 유지시간을 지정
+    // 테스트 제한을 16초로 지정
   }, 16000)
+
+  test('네비게이션 아이템이 4개 표시된다', async () => {
+    const navbar = await page.$eval('[data-testid="navbar"]', el => el ? true : false)
+    expect(navbar).toBe(true)
+
+    const items = await page.$$('[data-testid="navli"]')
+    // 테스트 제한을 16초로 지정
+    expect(items.length).toBe(4)
+  }, 160000)
 })
