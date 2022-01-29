@@ -26,7 +26,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "testing-library/prefer-screen-queries": [
+        "off"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -41,11 +46,13 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.5",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/faker": "^6.6.9",
     "@types/jest": "^27.4.0",
     "@types/jest-cli": "^24.3.0",
     "@types/puppeteer": "^5.4.4",
-    "faker": "^6.6.6",
+    "faker": "^5.5.3",
     "jest": "^27.4.7",
     "jest-cli": "^27.4.7",
     "puppeteer": "^13.1.2",

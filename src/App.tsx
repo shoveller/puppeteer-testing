@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {FormEventHandler, useCallback, useState} from 'react';
 import './App.css';
+import {LoginForm} from "./Login";
+import {SuccessMessage} from "./SuccessMessage";
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(false)
+  const onSubmit = useCallback<FormEventHandler>(() => {
+    setLoggedIn(value => !value)
+  }, [setLoggedIn]);
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -22,6 +29,7 @@ function App() {
           <li className="nav-li" data-testid="navli"><a href="#">Works</a></li>
         </ul>
       </nav>
+      {isLoggedIn ? <SuccessMessage/> : <LoginForm onSubmit={onSubmit}/>}
     </div>
   );
 }
